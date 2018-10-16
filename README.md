@@ -47,7 +47,8 @@ CLK | GPIO 23 | Pin 16 | Blue w/ White
    *     ifconfig
    * IP address is located in the eth0 section
    * Note: Raspi should be connected to demo vehicle Ethernet Switch during this step
-9. Set launcer.sh to run at boot/login
+9. Set launcher.sh to run at boot/login
    *     sudo nano ~/.bashrc
    * Add the following line to the bottom of the file:
    *     sudo sh ~/motuctrl/launcher.sh
+10. Update IP address in rotaryKnobMotuCtrl.py to the IP address of your MOTU
