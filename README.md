@@ -1,6 +1,5 @@
 # MOTU A16 Remote Volume Control Over TCP/IP
-This code enables the use of a digital rotary encoder as a volume knob for ISC channels on the MOTU A16
-The pin assignment is as follows:
+This code enables the use of a digital rotary encoder as a volume knob for ISC channels on the MOTU A16.
 
 **Wiring Info**
 
@@ -12,7 +11,7 @@ SW | NC | NC | N/A
 DT | GPIO 22 | Pin 15 | White w/ Blue
 CLK | GPIO 23 | Pin 16 | Blue w/ White
 
-**Raspi Pin Diagram**
+**Raspi GPIO Pin Header Diagram**
 
 2 ooooooxxooooooooooooo 40<br>
 1 oooooooxxoooooooooooo 39<br>
