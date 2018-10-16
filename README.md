@@ -2,11 +2,16 @@
 This code enables the use of a digital rotary encoder as a volume knob for ISC channels on the MOTU A16
 The pin assignment is as follows:
 
-GND : Pin 14, Blue (GND)<br>
-\+   : Pin 17, White (3.3V)<br>
-SW  : NC<br>
-DT  : Pin 15, White w/ Blue (GPIO 22)<br>
-CLK : Pin 16, Blue w/ White (GPIO 23)<br>
+**Wiring Info**<br>
+Rotary Encoder Pin | Raspi Pin | Raspi Physical Pin | Wire Color
+----|-----|--------|------
+GND | GND | Pin 14 | Blue
+\+ | 3.3V | Pin 17 | White
+SW | NC | NC | N/A
+DT | GPIO 22 | Pin 15 | White w/ Blue
+CLK | GPIO 23 | Pin 16 | Blue w/ White
 
-2 ooooooxxoooooooooooo 40<br>
+2 ooooooxxooooooooooooo 40<br>
 1 oooooooxxoooooooooooo 39<br>
+
+**Raspi Setup Info**
