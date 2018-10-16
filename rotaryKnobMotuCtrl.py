@@ -1,9 +1,16 @@
 import sys
-
-sys.path.append("modules")
-from RPi import GPIO
+import logging
 import time
+from RPi import GPIO
+sys.path.append("modules")
+
 from motu import cMotuCtrl
+from logger import cLogger
+
+dJsonLogger = { "loggers":	{ "":		{ "handlers":["standard","socket"], "level": "ERROR" }, # Root logger
+				  "cMotuCtrl":	{ "handlers":["standard","socket"], "level": "ERROR", "propogate": False}}}
+
+myLog = cLogger(dJsonLogger)
 
 # Set up GPIO for the Rotary Encoder
 clk = 22
@@ -17,7 +24,7 @@ GPIO.setup(dt,  GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
 counter = 0
 
 # Set up MOTU
-sDeviceIpAddress = '192.168.1.100'
+sDeviceIpAddress = '169.254.157.88'
 oMotu001 = cMotuCtrl(sDeviceIpAddress)
 iMixChannelList = [16, 17, 18]
 lastGain = oMotu001.getMixerInFaderDb(16)
@@ -50,10 +57,12 @@ try:
 		if counter > 3:
 			volChange(2)
 			counter = 0
+			#print "vol up"
 			time.sleep(0.05)
 		elif counter < -3:
 			volChange(-2)
 			counter = 0
+			#print "vol down"
 			time.sleep(0.05)
 
 		clkLastState = clkState
