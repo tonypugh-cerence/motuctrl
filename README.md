@@ -16,6 +16,13 @@ CLK | GPIO 23 | Pin 16 | Blue w/ White
 2 ooooooxxooooooooooooo 40<br>
 1 oooooooxxoooooooooooo 39<br>
 
+**Rotary Encoder**
+
+For the US vehicles (Mercedes GLE550e and Chrysler Pacifica), we used the following Rotary Encoders from Amazon:<br>
+https://www.amazon.com/Cylewet-Encoder-15%C3%9716-5-Arduino-CYT1062/dp/B06XQTHDRR/
+
+Any rotary encoder with similar pinout should work. They are available from a variety of manufacturers and should function fundamentally the same. There are 3 remaining that could be used for the V-Class vehicles, but it is probably cheaper to purchase some instead of shipping internationally.
+
 **Raspi Setup Info**
 
 1. Download Raspbian Stretch Lite Operating System and install on SD card
